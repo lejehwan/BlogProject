@@ -1,6 +1,6 @@
 use springboot, jsp, mysql, jpa, security
 
-*focus*   
+*--focus--*   
 JPA(Java Persistence API)는 자바 진영의 ORM 기술 표준
 
   - JPA가 제공하는 API를 사용하면 객체를 DB에 저장하고 관리할 때, 개발자가 직접 SQL을 작성하지 않아도 된다.
@@ -15,4 +15,4 @@ Hibernate
   자바 진영의 다양한 ORM 프레임워크 중 가장 많이 사용되는 성숙한 프레임워크
   이러한 Hibernate 기반으로 만들어진 ORM 기술 표준이 바로 JPA다.
  
-*즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.
+*즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.*
