@@ -13,6 +13,6 @@ ORM(Object-Relational Mapping)은 객체와 관계형 DB를 매핑한다는 뜻
 
 Hibernate
   자바 진영의 다양한 ORM 프레임워크 중 가장 많이 사용되는 성숙한 프레임워크
-
-이러한 Hibernate 기반으로 만들어진 ORM 기술 표준이 바로 JPA다.
-즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.
+  이러한 Hibernate 기반으로 만들어진 ORM 기술 표준이 바로 JPA다.
+ 
+*즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.
