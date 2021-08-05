@@ -1,6 +1,6 @@
 use springboot, jsp, mysql, jpa, security
 
-*focus*
+*focus*   
 JPA(Java Persistence API)는 자바 진영의 ORM 기술 표준
 
   - JPA가 제공하는 API를 사용하면 객체를 DB에 저장하고 관리할 때, 개발자가 직접 SQL을 작성하지 않아도 된다.
