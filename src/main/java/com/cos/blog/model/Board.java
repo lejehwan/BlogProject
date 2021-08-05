@@ -1,5 +1,6 @@
 package com.cos.blog.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,11 +34,15 @@ public class Board {
 //    FetchType.EAGER : 조인해서 가져옴
 //    FetchType.LAZY : 필요에 의해서 셀렉트로 가져옴
 
+    // ManyToOne => 외래키
     @ManyToOne(fetch = FetchType.EAGER)// Many = Board, User = One -> 한명의 유저는 여러개의 게시글을 작성 할 수 있다.
     @JoinColumn(name = "userId")
     private User user;// DB는 오브젝트를 저장할 수 없다. FK, 자바는 오브젝트를 저장할 수 있다.
 
-    @OneToMany(mappedBy = "board",fetch = FetchType.EAGER)// 하나의 게시글에는 여러개의 답글이 있다.
+    // OneToMany => 외래키 X
+    @OneToMany(mappedBy = "board",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)// 하나의 게시글에는 여러개의 답글이 있다.
+    @JsonIgnoreProperties({"board"})// 무한 참조 방지
+    @OrderBy("id desc")
     // mappedBy : 연관관계의 주인이 아니다 (난 FK가 아니다) > DB에 컬럼 생성 X
     // FK가 필요없음 왜냐하면 board에서 가져옴
     private List<Reply> reply;

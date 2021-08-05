@@ -25,6 +25,38 @@
   </div>
     <hr>
 
+    <div class="card">
+    <form>
+        <input type="hidden" id="boardId" value="${board.id}"/>
+            <div class="card-body">
+                <textarea rows="1" class="form-control" id="reply-title"></textarea>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" id="btn-reply-save">등록</button>
+            </div>
+    </form>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            댓글 리스트
+        </div>
+        <ul class="list-group" id="reply-box">
+          <c:forEach var="reply" items="${board.reply}">
+            <li class="list-group-item d-flex justify-content-between" id="reply-${reply.id}">
+            <div>
+                ${reply.title}
+            </div>
+            <div class="d-flex">
+                <div class="font-italic">작성자: ${reply.user.username} &nbsp;</div>
+                <button onclick="index.replyDelete(${board.id}, ${reply.id})" class="badge">삭제</button>
+            </div>
+          </li>
+          </c:forEach>
+
+
+        </ul>
+    </div>
 </div>
 <script src="/js/board.js"></script>
 <%@include file="../layout/footer.jsp"%>
