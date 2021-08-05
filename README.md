@@ -1,1 +1,1 @@
-use springboot, jsp, jpa, security
+use springboot, jsp, mysql, jpa, security
