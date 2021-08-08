@@ -1,4 +1,4 @@
-use springboot, jsp, mysql, jpa, security
+use springboot, jsp, mysql, jpa, security 
 
 *--focus--*   
 JPA(Java Persistence API)는 자바 진영의 ORM 기술 표준
